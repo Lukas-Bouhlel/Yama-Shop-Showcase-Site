@@ -1,0 +1,255 @@
+html,
+body {
+    margin: unset;
+    font-family: 'Inter', sans-serif;
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    height: 5px;
+    background: black;
+    transition: width .25s;
+    z-index: 9999;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    height: 80px;
+    background: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    position: fixed;
+    width: 100%;
+}
+
+#container-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: inherit;
+}
+
+#logo-h {
+    padding-left: 0.5%;
+}
+
+#nav-header {
+    display: none;
+}
+
+#list-nav {
+    list-style: none;
+    display: inline-grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 0;
+    justify-items: center;
+    gap: 15%;
+    justify-content: center;
+}
+
+#topnav_responsive_menu {
+    justify-content: end;
+    display: flex;
+}
+
+#list-nav-responsive {
+    width: 0%;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+    list-style: none;
+    position: absolute;
+    background: white;
+    text-align: end;
+    padding: 5% 0%;
+    margin-top: 1px;
+    border-left: 0px;
+}
+
+#list-nav-responsive.active {
+    width: 50%;
+    transition: width 0.5s ease-in-out;
+    margin-top: 1px;
+}
+
+#container-header nav li,
+#footer-container nav li {
+    padding: 0 3%;
+}
+
+#list-nav-responsive li {
+    padding: 0 10%;
+}
+
+#container-header nav li a,
+#footer-container nav li a,
+#list-nav-responsive li a {
+    text-decoration: none;
+    color: #000000d2;
+}
+
+#container-header nav li a:hover,
+#footer-container nav li a:hover,
+#list-nav-responsive li a:hover {
+    color: black;
+    transition-duration: 1s;
+}
+
+#container-icons {
+    justify-content: space-between;
+    width: 113px;
+    padding-right: 1%;
+    display: none;
+}
+
+#container-icons a:hover #icons-hover {
+    stroke: black;
+    transition-duration: 1s;
+}
+
+#openBtn {
+    padding-right: 3%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 100%;
+}
+
+#openBtn span {
+    position: absolute;
+    width: 60%;
+    height: 6px;
+    background-color: black;
+    transition: 0.2s all ease;
+}
+
+#openBtn span {
+    margin: 0;
+}
+
+#openBtn span:nth-child(1) {
+    transform: translateY(-15px);
+}
+
+#openBtn span:nth-child(2) {
+    transform: translateY(15px);
+}
+
+#openBtn:hover span:nth-child(1) {
+    transform: translateY(-15px);
+}
+
+#openBtn:hover span:nth-child(2) {
+    transform: translateY(15px);
+}
+
+#openBtn.active span:nth-child(1) {
+    transform: translateY(-40px);
+    opacity: 0;
+}
+
+#openBtn.active span:nth-child(2) {
+    transform: translateY(40px);
+    opacity: 0;
+}
+
+#openBtn.active span:nth-child(3),
+#openBtn.active span:nth-child(4) {
+    transform: rotate(0deg);
+}
+
+
+#openBtn.active span:nth-child(3) {
+    transform: rotate(45deg);
+}
+
+#openBtn.active span:nth-child(4) {
+    transform: rotate(-45deg);
+}
+
+
+main {
+    font-size: 15px;
+    padding-top: 35%;
+}
+
+#container-main {
+    width: 100%;
+    display: grid;
+    grid-column-gap: 1%;
+    grid-template-columns: repeat(1, 0fr);
+    justify-content: center;
+}
+
+.container-clothes {
+    padding-bottom: 2%;
+    margin-bottom: 1%;
+    height: max-content;
+    width: fit-content;
+    border: 1px solid transparent;
+}
+
+.container-clothes:hover {
+    border: 1px solid black;
+    transition-duration: 0.3s;
+}
+
+.container-text-clothes {
+    padding-left: 1%;
+}
+
+.img-clothes {
+    width: 260px;
+    height: 363px;
+}
+
+.title-clothes {
+    margin: 8px 0 0;
+}
+
+.price-clothes {
+    font-weight: 800;
+}
+
+footer {
+    text-align: center;
+    padding: 2% 0;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+#container-footer {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+#container-footer hr {
+    border: 1px solid #000000;
+    width: 25vw;
+    height: 0px;
+    display: none;
+}
+
+#hr1 {
+    margin-right: 0;
+}
+
+#hr2 {
+    margin-left: 0;
+}
+
+#nav-footer {
+    margin-bottom: 7%;
+}
+
+#nav-footer #list-nav {
+    grid-template-columns: repeat(2, 1fr);
+}
